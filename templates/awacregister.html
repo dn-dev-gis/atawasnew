@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="pages main_light">
+
+<h1>AWAC Registration</h1>
+
+<p class="regular-text">Enter your details to register for the upcoming Annual Water Conference. You will receive information through the email provided.</p>
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+  <h1>{{ error }}</h1>
+
+</form>
+
+<img class="banner" src="{% static 'images/awac.jpg' %}" alt="awac-banner">
+
+</div>
+{% endblock content%}

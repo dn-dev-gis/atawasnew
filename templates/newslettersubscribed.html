@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="pages main_light">
+
+<h1>Subscribe newsletter</h1>
+
+<p class="regular-text">You successfully subscribed the ATAWAS Newsletter using {{ email }}
+
+<a href="{% url 'newsletter' %}" class="btn btn-outline-light mx-auto d-block">Newsletters</a>
+
+<img class="banner" src="{% static 'images/newsletter.jpg' %}" alt="awac-banner">
+
+</div>
+{% endblock content%}

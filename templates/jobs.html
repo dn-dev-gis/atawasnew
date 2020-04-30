@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="pages main_light">
+
+<h1>Job Opportunities</h1>
+
+<p class="regular-text">We are posting job adverts from our members here. If you are interested in one of the adverts please get in touch with the advertising organisation directly.</p>
+
+<ul>
+  {% for job in jobs %}
+  <li class="list"><i class="fas fa-caret-right"></i>  <a href="{{ job.jobFile.url }}">{{ job.name }}</a>, posted {{ job.postDate}}</li>
+
+
+  {% endfor %}
+</ul>
+
+
+</div>
+{% endblock content%}

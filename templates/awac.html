@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="pages main_light">
+
+<h1>Annual Water Conference</h1>
+
+<p class="regular-text">Planning of the Annual Water Conference 2020 will start soon. Let's meet again in November - this year in Mtwara.</p>
+<p class="regular-text">Find more information here soon:</p>
+
+<ul class="list">
+  <li><a href="{% url 'awacregister' %}">AWAC2020 Registration</a></li>
+  <li><a href="#"><i class="fas fa-file-pdf"></i> AWAC2020 Flyer</a></li>
+  <li><a href="#"><i class="fas fa-file-pdf"></i> AWAC2020 Call for Papers</a></li>
+</ul>
+
+<img class="banner" src="{% static 'images/awac.jpg' %}" alt="awac-banner">
+
+</div>
+{% endblock content%}

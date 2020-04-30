@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="pages main_medium">
+<h1>Contacts</h1>
+
+{% for allcontact in allcontacts %}
+
+<h3>{{ allcontact.lastName}}</h3>
+
+<hr class="article-line">
+
+{% endfor %}
+</div>
+
+{% endblock content %}

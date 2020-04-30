@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="pages main_light">
+
+<h1>AWAC Registration</h1>
+
+<p class="regular-text">You successfully registered for AWAC using {{ email }}
+
+<a href="{% url 'awac' %}" class="btn btn-outline-light mx-auto d-block">AWAC</a>
+
+<img class="banner" src="{% static 'images/awac.jpg' %}" alt="awac-banner">
+
+</div>
+{% endblock content%}

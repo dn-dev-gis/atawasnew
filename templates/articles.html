@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="pages main_medium">
+
+<h3>{{ article.title}}</h1>
+<p class="date-text">Posted on {{ article.createDate|date:"dS M Y" }}</p>
+<p class="regular-text">{{ article.text }}</p>
+<img src="{{ article.imageTitle.url}}" alt="" height=300 width=300>
+{% if article.imageTitleCaption%}
+<p>{{ article.imageTitleCaption }}</p>
+{% endif %}
+
+{% if article.image2%}
+<img src="{{ article.image2.url}}" alt="" height=300 width=300>
+{% endif %}
+{% if article.image2Caption%}
+<p>{{ article.image2Caption }}</p>
+{% endif %}
+
+{% if article.image3%}
+<img src="{{ article.image3.url}}" alt="" height=300 width=300>
+{% endif %}
+{% if article.image3Caption%}
+<p>{{ article.image3Caption }}</p>
+{% endif %}
+
+{% if article.image4%}
+<img src="{{ article.image4.url}}" alt="" height=300 width=300>
+{% endif %}
+{% if article.image4Caption%}
+<p>{{ article.image4Caption }}</p>
+{% endif %}
+
+{% if article.image5%}
+<img src="{{ article.image5.url}}" alt="" height=300 width=300>
+{% endif %}
+{% if article.image5Caption%}
+<p>{{ article.image5Caption }}</p>
+{% endif %}
+
+<hr class="article-line">
+
+{% url article.category|cut:" " as branchurl %}
+<a href="{{ branchurl }}" class="btn btn-outline-light mx-auto d-block">show all {{ article.category }}</a>
+
+
+</div>
+
+{% endblock content %}
