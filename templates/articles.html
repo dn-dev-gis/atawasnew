@@ -6,7 +6,7 @@
 <div class="pages main_medium">
 
 <h3>{{ article.title}}</h1>
-<p class="date-text">Posted on {{ article.createDate|date:"dS M Y" }}</p>
+<p class="date-text">Posted on  {{ article.createDate|date:"dS M Y" }}</p>
 <p class="regular-text">{{ article.text }}</p>
 <img src="{{ article.imageTitle.url}}" alt="" height=300 width=300>
 {% if article.imageTitleCaption%}

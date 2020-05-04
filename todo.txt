@@ -1,15 +1,12 @@
 format articles (p, li, bold), add download and links in articles
 
 test different picture sizes and positions and orientations
-check responsiveness (incl carousel and header), little offset in css design
-sticky footer
+check responsiveness (incl carousel and header), little offset in css design, sticky footer
 static and media, clean code, beautify
 
 facebook link, doc links, buttons (categories, more, pages), forms (incl errors)
 provide real content in database
 
-git/github
-docker
 postgresql
 upload
 
