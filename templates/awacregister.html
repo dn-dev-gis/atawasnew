@@ -1,23 +1,25 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% block content %}
 
-<div class="pages main_light">
+<div class="pages">
 
-<h1>AWAC Registration</h1>
+  <h1>AWAC Registration</h1>
 
-<p class="regular-text">Enter your details to register for the upcoming Annual Water Conference. You will receive information through the email provided.</p>
+  <p class="regular-text">Enter your details to register for the upcoming Annual Water Conference. You will receive information through the email provided.</p>
 
-<form method="POST">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Submit</button>
-  <h1>{{ error }}</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <br>
+    <p class="regular-text warning">{{ error }}</p>
+    <button type="submit">Submit</button>
 
-</form>
+  </form>
 
-<img class="banner" src="{% static 'images/awac.jpg' %}" alt="awac-banner">
+  <img class="imgarticle img-fluid" src="{% static 'images/awac.jpg' %}" alt="awac-banner">
 
 </div>
 {% endblock content%}

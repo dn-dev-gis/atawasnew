@@ -3,15 +3,14 @@
 
 {% block content %}
 
-<div class="pages main_light">
+<div class="pages">
 
-<h1>AWAC Registration</h1>
+  <h1>AWAC Registration</h1>
 
-<p class="regular-text">You successfully registered for AWAC using {{ email }}
+  <p class="regular-text">You successfully registered for AWAC using {{ email }}.
 
-<a href="{% url 'awac' %}" class="btn btn-outline-light mx-auto d-block">AWAC</a>
-
-<img class="banner" src="{% static 'images/awac.jpg' %}" alt="awac-banner">
+    <br>
+    <img class="imgarticle img-fluid" src="{% static 'images/awac.jpg' %}" alt="awac-banner">
 
 </div>
 {% endblock content%}

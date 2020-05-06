@@ -31,7 +31,6 @@ urlpatterns = [
     path('newslettersubscribe/', views.newslettersubscribe, name='newslettersubscribe'),
     path('newslettersubscribed/', views.newslettersubscribed, name='newslettersubscribed'),
 
-
     # dynamic pages (articles)
     path('upcoming/', views.upcomingevents, name='upcomingevents'),
     path('past/', views.pastevents, name='pastevents'),
@@ -40,10 +39,8 @@ urlpatterns = [
     path('news/', views.news, name = 'news'),
     path('articles/<int:article_id>/', views.articledetail, name='articledetail'),
 
-
     # contact database
-    path('contactdb/', include('contacts.urls')),
-
+    # path('contactdb/', include('contacts.urls')),
 
 ]
 

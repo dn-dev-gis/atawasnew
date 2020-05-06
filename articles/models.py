@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 # Articles
@@ -15,7 +16,7 @@ class Article(models.Model):
     modifyDate = models.DateField(blank=True)
     homepageDisplay = models.BooleanField()
     title = models.CharField(max_length=150)
-    text = models.TextField()
+    text = RichTextField()
     imageTitle = models.ImageField(upload_to='articles/images/')
     imageTitleCaption = models.CharField(max_length=300, blank=True)
     image2 = models.ImageField(upload_to='articles/images/', blank=True)
@@ -76,16 +77,16 @@ class JobPost(models.Model):
         return self.name
 
 
-# AWAC
+# AWAC Registration
 class AwacRegistration(models.Model):
     name = models.CharField(max_length=150)
     organisation = models.CharField(max_length=150, blank=True)
     position = models.CharField(max_length=150, blank=True)
     email = models.EmailField(max_length=150, unique=True)
     phone = models.CharField(max_length=20, blank=True)
-    atawasmember = models.BooleanField(null=True, blank=True)
-    organisationatawasmember = models.BooleanField(null=True, blank=True)
-    exhibitor = models.BooleanField(null=True, blank=True)
+    atawasmember = models.BooleanField(null=True, blank=True, verbose_name="Are you a member of ATAWAS?")
+    organisationatawasmember = models.BooleanField(null=True, blank=True, verbose_name="Is your organisation a member of ATAWAS?")
+    exhibitor = models.BooleanField(null=True, blank=True, verbose_name="Would you also like to be an exhibitor?")
 
     def __str__(self):
         return self.name

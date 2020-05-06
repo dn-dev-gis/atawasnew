@@ -1,47 +1,93 @@
-html {
-  margin: 0;
-  display: table;
-  height: 100%;
-  width: 100%;
-}
-
 body {
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+html, body, p, nav, div {
   margin: 0;
-  padding:0;
-  display: table;
-  height: 100%;
-  width: 100%;
-
 }
 
-.wrapper {
-  heigth: auto;
+h1, h2, h3 {
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 1rem;
 }
 
-footer {
-  display: table-row;
+h2, h3 {
+  padding-top: 1rem;
+}
+
+p {}
+
+/* main area and articles */
+.pages {
+  padding: 2.5rem 20%;
+  background-color: #FAFAE5;
+}
+
+.main_light {
+  background-color: #FAFAE5;
+  padding: 1rem 15%;
+}
+
+.main_medium {
+  background-color: #E9E9D7;
+  padding: 1rem 15%;
+}
+
+.regular-text {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.list {
+  list-style-type: none;
+  line-height: 1.7;
+}
+
+.date-text {
+  padding-bottom: 1rem;
+  font-style: italic;
+  font-size: 90%;
+}
+
+/* pictures */
+.imgarticle {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.imgcaption {
+  padding-bottom: 1rem;
+  font-style: italic;
+  font-size: 80%;
+}
+
+.warning {
+  color: red;
+}
+
+.article-line {
+  border: 0;
   height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-p, nav, div {
-  margin: 0;
-}
-
-/* header bar */
-.header {
-  background-color: #0891C6;
-  padding: 0.6rem 0 0.6rem 15%;
-}
-
+/* title and navbar */
 #atawas-logo {
   width: 100px;
   padding: 0.1rem 0.1rem 0.1rem 0.4rem;
 }
 
+.header {
+  background-color: #0891C6;
+  padding: 0.6rem 0 0.6rem 15%;
+}
+
 .header-name {
   position: relative;
   left: 5px;
-  font-family: 'Manrope', sans-serif;
   font-weight: bold;
   font-size: 1.7rem;
   padding-left: 1rem;
@@ -50,7 +96,6 @@ p, nav, div {
 }
 
 .header-short {
-  font-family: 'Manrope', sans-serif;
   font-weight: bold;
   font-size: 4rem;
   letter-spacing: 0.2rem;
@@ -61,19 +106,27 @@ p, nav, div {
   z-index: 0;
 }
 
-/* menu bar */
 .navigation {
   padding-left: 14%;
   background-color: #9AD0EC;
 }
 
+.navbar-toggler-icon {
+  stroke: #fff;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #fff;
+  border-width: 2px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 .nav-item {
   padding-left: 0.6rem;
   padding-right: 0.6rem;
-}
-
-.nav-link: hover {
-  color: #0891C6;
 }
 
 .nav-link {
@@ -84,8 +137,8 @@ p, nav, div {
   padding: 0;
 }
 
-.navbar-toggler-icon {
-  stroke: #fff;
+.nav-link: hover {
+  color: #0891C6;
 }
 
 .dropdown-menu {
@@ -108,7 +161,98 @@ p, nav, div {
   color: #0891C6;
 }
 
-/* sections */
+/* impressum */
+.impressum {
+  background-color: #9AD0EC;
+  padding: 3rem 20% 3rem 25%;
+  color: white;
+  line-height: 1.8;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.impressum-link {
+  color: white;
+}
+
+.impressum-link:hover {
+  color: white;
+}
+
+/* member accordion */
+#subMenuRegular, #subMenuAffiliate {
+  padding-left: 1rem;
+}
+
+#indMenuRegular, #indMenuAffiliate {
+  padding-left: 4rem;
+  font-size: 90%;
+  padding-bottom: 0.5rem;
+}
+
+/* hompage cards */
+.article-card {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.card-header {
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: right;
+}
+
+.homecategory {
+  color: #212529;
+}
+
+.homecategory:hover {
+  color: #212529;
+}
+
+.card-title {
+  text-align: center;
+  padding-bottom: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.card-text {
+  padding-bottom: 1rem;
+}
+
+.main_light .card {
+  border-color: #E9E9D7;
+}
+
+.main_medium .card {
+  border-color: #FAFAE5;
+}
+
+.main_light .card-header {
+  background-color: #E9E9D7;
+}
+
+.main_medium .card-header {
+  background-color: #FAFAE5;
+}
+
+.btn-outline-light {
+  color: #000;
+  border-color: #E9E9D7;
+  font-size: 0.8rem;
+}
+
+/* carousel */
+.carousel-inner>.carousel-item>img,
+.carousel-inner>.carousel-item>a>img {
+  display: block;
+  width: 80%;
+  height: auto;
+  padding-left: 15%;
+}
+
 #carousel {
   background-color: #000;
   text-align: center;
@@ -127,150 +271,4 @@ p, nav, div {
 #carousel a {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-}
-
-.carousel-inner>.carousel-item>img,
-.carousel-inner>.carousel-item>a>img {
-  display: block;
-  width: 80%;
-  height: auto;
-  padding-left: 15%;
-}
-
-.custom-toggler.navbar-toggler {
-  border-color: #fff;
-  border-width: 2px;
-}
-
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.background {
-  background-color: #FAFAE5;
-}
-
-.main_light {
-  background-color: #FAFAE5;
-  padding: 1rem 15%;
-}
-
-.main_medium {
-  background-color: #E9E9D7;
-  padding: 1rem 15%;
-}
-
-.article-card {
-  padding: 1rem;
-}
-
-.card {
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.9rem;
-}
-
-.main_light .card {
-  border-color: #E9E9D7;
-}
-
-.main_medium .card {
-  border-color: #FAFAE5;
-}
-
-.card-header {
-  font-size: 0.8rem;
-  font-weight: 300;
-  text-align: right;
-}
-
-.main_light .card-header {
-  background-color: #E9E9D7;
-}
-
-.main_medium .card-header {
-  background-color: #FAFAE5;
-}
-
-.card-title {
-  text-align: center;
-  padding-bottom: 0.4rem;
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.card-text {
-  padding-bottom: 1rem;
-}
-
-.btn-outline-light {
-  color: #000;
-  border-color: #E9E9D7;
-  font-size: 0.8rem;
-}
-
-/* impressum */
-.impressum {
-  background-color: #9AD0EC;
-  padding: 3rem 20% 3rem 25%;
-  color: white;
-  line-height: 1.8;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-.pages {
-  padding: 2.5rem 20%;
-}
-
-.list {
-  list-style-type: none;
-  font-family: 'Manrope', sans-serif;
-  line-height: 1.7;
-}
-
-h1, h2, h3 {
-  font-family: 'Ubuntu', sans-serif;
-  padding-bottom: 1rem;
-}
-
-.regular-text {
-  padding-bottom: 1rem;
-  font-family: 'Manrope', sans-serif;
-}
-
-.date-text {
-  padding-bottom: 1rem;
-  font-family: 'Manrope', sans-serif;
-  font-style: italic;
-  font-size: 90%;
-}
-
-h2, h3 {
-  padding-top: 1rem;
-}
-
-.banner {
-  padding-top: 2rem;
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-#subMenuRegular, #subMenuAffiliate {
-  padding-left: 1rem;
-}
-
-#indMenuRegular, #indMenuAffiliate {
-  padding-left: 4rem;
-  font-size: 90%;
-  padding-bottom: 0.5rem;
-}
-
-.article-line {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  margin-top: 2rem;
-  margin-bottom: 1rem;
 }

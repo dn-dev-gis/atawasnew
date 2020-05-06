@@ -3,30 +3,31 @@
 
 {% block content %}
 
-<div class="pages main_light">
+<div class="pages">
 
   <h1>ATAWAS Newsletter</h1>
 
   <p class="regular-text">Stay informed about interesting topics from the sector. The ATAWAS Newsletter covers stories from our different members and is issued every quarter.</p>
   <p class="regular-text">Make sure you are not missing out on the next issues. <a href="{% url 'newslettersubscribe' %}">Subscribe</a> now.</p>
 
-  <br/>
+  <br />
 
   <div class="container">
     <div class="row">
       {% for newsletter in newsletters %}
-        <div class="col-lg-3">
-          <a href="{{ newsletter.file.url }}"><img class="card-img-top" src="{{ newsletter.image.url }}" alt="Newsletter thumbnail"></a>
-          <p><a href="{{ newsletter.file.url }}"><i class="fas fa-file-pdf"></i> Download issue {{ newsletter.issue }}/{{ newsletter.year }}</a><p>
-          <br/>
-        </div>
+      <div class="col-lg-3">
+        <a href="{{ newsletter.file.url }}"><img class="card-img-top" src="{{ newsletter.image.url }}" alt="Newsletter thumbnail"></a>
+        <p><a href="{{ newsletter.file.url }}"><i class="fas fa-file-pdf"></i> Download issue {{ newsletter.issue }}/{{ newsletter.year }}</a>
+        <p>
+          <br />
+      </div>
       {% endfor %}
     </div>
   </div>
 
-  <br/>
+  <br />
 
-  <img class="banner" src="{% static 'images/newsletter.jpg' %}" alt="awac-banner">
+  <img class="imgarticle img-fluid" src="{% static 'images/newsletter.jpg' %}" alt="awac-banner">
 
 </div>
 {% endblock content%}

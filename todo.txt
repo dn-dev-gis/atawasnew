@@ -1,24 +1,17 @@
-format articles (p, li, bold), add download and links in articles
-
-test different picture sizes and positions and orientations
-check responsiveness (incl carousel and header), little offset in css design, sticky footer
-static and media, clean code, beautify
-
-facebook link, doc links, buttons (categories, more, pages), forms (incl errors)
-provide real content in database
-
+check responsiveness, carousel, header, offset in css design, sticky footer
 postgresql
 upload
 
 ------------------------------
 
-later:
-  list articles in blocks of 5
-  search
-  post to facebook automatically
-  what else can joomla do?
-  manual (how to change what)
-  emails (newsletter confirm, newsletter unsubscribe, newsletter send, confirm awac registration, inform about new registration)
+list articles in blocks of 5
+search
+post to facebook automatically
+manual (how to change what), incl pictures
+emails (newsletter confirm, newsletter unsubscribe, newsletter send, confirm awac registration, inform about new registration)
+awac links if exist only
+members show/hide
+format articles (p, li, bold), add download and links in articles
 
 ---------------------------------
 

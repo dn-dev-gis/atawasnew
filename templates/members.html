@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class="pages main_medium">
+<div class="pages">
 
   <h1>Our Members</h1>
 
@@ -13,61 +13,59 @@
 
   <div class="accordion" id="mainMenuRegular">
 
-      <li class="list"><button class="btn" type="button" data-toggle="collapse" data-target="#subMenuRegular" aria-expanded="true" aria-controls="mainMenuRegular">
-          <i class="fas fa-caret-right"></i>  Show all regular members
-        </button></li>
+    <li class="list"><button class="btn" type="button" data-toggle="collapse" data-target="#subMenuRegular" aria-expanded="true" aria-controls="mainMenuRegular">
+        <i class="fas fa-caret-right"></i> Show all regular members ({{ memberscount }})
+      </button></li>
 
-      <div id="subMenuRegular" class="collapse hide" data-parent="#mainMenuRegular">
-        {% for member in members %}
-        <div>
-          <li class="list"><button class="btn" type="button" data-toggle="collapse" data-target="#indMenuRegular" aria-expanded="false" aria-controls="subMenuRegular">
-              <i class="fas fa-caret-right"></i>  {{ member.name }}
-            </button></li>
+    <div id="subMenuRegular" class="collapse hide" data-parent="#mainMenuRegular">
+      {% for member in members %}
+      <div>
+        <li class="list"><button class="btn" type="button" data-toggle="collapse" data-target="#indMenuRegular" aria-expanded="false" aria-controls="subMenuRegular">
+            <i class="fas fa-caret-right"></i> {{ member.name }}
+          </button></li>
 
-          <div id="indMenuRegular" class="collapse hide" data-parent="#subMenuRegular">
-            <li class="list">P.O. Box {{ member.pobox }}, {{ member.town }}</li>
-            <li class="list">{{ member.email }}</li>
-            <li class="list">{{ member.website }}</li>
-          </div>
+        <div id="indMenuRegular" class="collapse hide" data-parent="#subMenuRegular">
+          <li class="list">{% if member.pobox %}<i class="fas fa-envelope"></i> {% if member.pobox %}P.O. Box {{ member.pobox }}, {% endif %}{{ member.town }}{% endif %}</li>
+          <li class="list">{% if member.email %}<i class="fas fa-at"></i> {{ member.email }}{% endif %}</li>
+          <li class="list">{% if member.website %}<i class="fas fa-home"></i><a href="{{ member.website }}" target="_blank"> {{ member.website }}</a>{% endif %}</li>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
+    </div>
 
-</div>
+  </div>
 
   <h3>Affiliate Members</h3>
   <p class="regular-text">Any agency undertaking technical, economic or legal works, training or research related to water sanitation and to water resources in Tanzania may become an affiliated member. This category includes water and sanitation
     service vendors, water bottlers, manufactures of water supply materials, water well drillers, water engineering and plumbing works, research and training institutions.</p>
 
-    <div class="accordion" id="mainMenuAffiliate">
+  <div class="accordion" id="mainMenuAffiliate">
 
-        <li class="list"><button class="btn" type="button" data-toggle="collapse" data-target="#subMenuAffiliate" aria-expanded="true" aria-controls="mainMenuAffiliate">
-            <i class="fas fa-caret-right"></i>  Show all affiliate members
+    <li class="list"><button class="btn" type="button" data-toggle="collapse" data-target="#subMenuAffiliate" aria-expanded="true" aria-controls="mainMenuAffiliate">
+        <i class="fas fa-caret-right"></i> Show all affiliate members ({{ amemberscount }})
+      </button></li>
+
+    <div id="subMenuAffiliate" class="collapse hide" data-parent="#mainMenuAffiliate">
+      {% for amember in amembers %}
+      <div>
+        <li class="list"><button class="btn" type="button" data-toggle="collapse" data-target="#indMenuAffiliate" aria-expanded="false" aria-controls="subMenuAffiliate">
+            <i class="fas fa-caret-right"></i> {{ amember.name }}
           </button></li>
 
-        <div id="subMenuAffiliate" class="collapse hide" data-parent="#mainMenuAffiliate">
-          {% for amember in amembers %}
-          <div>
-            <li class="list"><button class="btn" type="button" data-toggle="collapse" data-target="#indMenuAffiliate" aria-expanded="false" aria-controls="subMenuAffiliate">
-                <i class="fas fa-caret-right"></i>  {{ amember.name }}
-              </button></li>
-
-            <div id="indMenuAffiliate" class="collapse hide" data-parent="#subMenuAffiliate">
-              <li class="list">P.O. Box {{ amember.pobox }}, {{ amember.town }}</li>
-              <li class="list">{{ amember.email }}</li>
-              <li class="list">{{ amember.website }}</li>
-            </div>
-          </div>
-          {% endfor %}
+        <div id="indMenuAffiliate" class="collapse hide" data-parent="#subMenuAffiliate">
+          <li class="list">{% if amember.pobox %}<i class="fas fa-envelope"></i> P.O. Box {{ amember.pobox }}, {{ amember.town }}{% endif %}</li>
+          <li class="list">{% if amember.email %}<i class="fas fa-at"></i> {{ amember.email }}{% endif %}</li>
+          <li class="list">{% if amember.website %}<i class="fas fa-home"></i><a href="{{ amember.website }}" target="_blank"> {{ amember.website }}</a>{% endif %}</li>
         </div>
+      </div>
+      {% endfor %}
+    </div>
 
   </div>
 
   <h3>Individual Members</h3>
   <p class="regular-text">Individual membership comprises different experts and professionals in the water sector who happened to be serving the industry through different organizations. Any individual dealing directly or indirectly with water
     resources, water supply and sanitation in Tanzania is eligible to be an Individual Member.</p>
-  <ul class="list">
-  </ul>
 
   <h3>Student Members</h3>
   <p class="regular-text">A Student Member can be any individual who is a regularly enrolled college or university student who spends at least one-half of his study time on academic course work or equivalent pertaining to water resources, water
